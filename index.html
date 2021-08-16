@@ -5,11 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogDeCafé</title>
+
+    <!---- Prefetch ---->
+
+    <link rel="prefetch" href="nosotros.html" as="document">
+    
+    <!---- Preload ---->    
+
+    <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link 
+        rel="preload" 
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" 
+        crossorigin="crossorigin"
+        as="font" 
+    >
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" 
+        rel="stylesheet"
+    >
+    
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
+    <!--<link rel="preload" href="img/blog1.jpg" as="image ">-->
+
 </head>
 <body>
 
@@ -58,7 +81,10 @@
 
                 <div class="entrada__imagen">
 
-                    <img src="img/blog1.jpg" alt="imagen blog">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    </picture>
 
                 </div>
 
@@ -66,7 +92,7 @@
 
                     <h4 class="no-margin">Tipos de Grano de Café</h4>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias exercitationem ex perspiciatis totam, accusantium error, obcaecati praesentium expedita fugiat rem quibusdam eveniet enim modi ut quo aperiam maxime? Dolores, eveniet!</p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                    <a href="entrada1.html" class="boton boton--primario">Leer Entrada</a>
 
                 </div>
 
@@ -76,7 +102,10 @@
 
                 <div class="entrada__imagen">
 
-                    <img src="img/blog2.jpg" alt="imagen blog">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog2.jpg" alt="imagen blog">
+                    </picture>
 
                 </div>
 
@@ -84,7 +113,7 @@
 
                     <h4 class="no-margin">3 Deliciosas Recetas de Café</h4>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias exercitationem ex perspiciatis totam, accusantium error, obcaecati praesentium expedita fugiat rem quibusdam eveniet enim modi ut quo aperiam maxime? Dolores, eveniet!</p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                    <a href="entrada2.html" class="boton boton--primario">Leer Entrada</a>
 
                 </div>
 
@@ -94,7 +123,10 @@
 
                 <div class="entrada__imagen">
 
-                    <img src="img/blog3.jpg" alt="imagen blog">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog3.jpg" alt="imagen blog">
+                    </picture>
 
                 </div>
 
@@ -102,7 +134,7 @@
 
                     <h4 class="no-margin">Beneficios del Café</h4>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias exercitationem ex perspiciatis totam, accusantium error, obcaecati praesentium expedita fugiat rem quibusdam eveniet enim modi ut quo aperiam maxime? Dolores, eveniet!</p>    
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                    <a href="entrada3.html" class="boton boton--primario">Leer Entrada</a>
 
                 </div>
 
@@ -128,7 +160,7 @@
                         Cupo: <span class="widget-curso__info">20</span>
                     </p>
 
-                    <a href="entrada.html" class="boton boton--secundario">Mas información</a>
+                    <a href="entrada4.html" class="boton boton--secundario">Mas información</a>
 
                 </li>
 
@@ -144,7 +176,7 @@
                         Cupo: <span class="widget-curso__info">20</span>
                     </p>
 
-                    <a href="entrada.html" class="boton boton--secundario">Mas información</a>
+                    <a href="entrada5.html" class="boton boton--secundario">Mas información</a>
 
                 </li>
 
@@ -177,6 +209,8 @@
         </div>
 
     </footer>
+
+    <script src="js/modernizr.js"></script>
     
 </body>
 </html>
